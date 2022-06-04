@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="next.css" />
+    <title>Next</title>
+  </head>
+  <body>
+    <div class="time">
+      <p class="timer">1:00</p>
+      <p class="score">Score</p>
+      <p class="points" id="pointer">0</p>
+    </div>
+    <div class="arrangement">
+      <div class="cbtn1">
+        <button class="btn1" id="11" onclick="mysound.play()"></button>
+        <button class="btn1" id="12" onclick="mysound.play()"></button>
+        <button class="btn1" id="13" onclick="mysound.play()"></button>
+        <button class="btn1" id="14" onclick="mysound.play()"></button>
+        <button class="btn1" id="15" onclick="mysound.play()"></button>
+        <button class="btn1" id="16" onclick="mysound.play()"></button>
+        <button class="btn1" id="21" onclick="mysound.play()"></button>
+        <button class="btn1" id="22" onclick="mysound.play()"></button>
+        <button class="btn1" id="23" onclick="mysound.play()"></button>
+        <button class="btn1" id="24" onclick="mysound.play()"></button>
+        <button class="btn1" id="25" onclick="mysound.play()"></button>
+        <button class="btn1" id="26" onclick="mysound.play()"></button>
+        <button class="btn1" id="31" onclick="mysound.play()"></button>
+        <button class="btn1" id="32" onclick="mysound.play()"></button>
+        <button class="btn1" id="33" onclick="mysound.play()"></button>
+        <button class="btn1" id="34" onclick="mysound.play()"></button>
+        <button class="btn1" id="35" onclick="mysound.play()"></button>
+        <button class="btn1" id="36" onclick="mysound.play()"></button>
+        <button class="btn1" id="41" onclick="mysound.play()"></button>
+        <button class="btn1" id="42" onclick="mysound.play()"></button>
+        <button class="btn1" id="43" onclick="mysound.play()"></button>
+        <button class="btn1" id="44" onclick="mysound.play()"></button>
+        <button class="btn1" id="45" onclick="mysound.play()"></button>
+        <button class="btn1" id="46" onclick="mysound.play()"></button>
+        <button class="btn1" id="51" onclick="mysound.play()"></button>
+        <button class="btn1" id="52" onclick="mysound.play()"></button>
+        <button class="btn1" id="53" onclick="mysound.play()"></button>
+        <button class="btn1" id="54" onclick="mysound.play()"></button>
+        <button class="btn1" id="55" onclick="mysound.play()"></button>
+        <button class="btn1" id="56" onclick="mysound.play()"></button>
+        <button class="btn1" id="61" onclick="mysound.play()"></button>
+        <button class="btn1" id="62" onclick="mysound.play()"></button>
+        <button class="btn1" id="63" onclick="mysound.play()"></button>
+        <button class="btn1" id="64" onclick="mysound.play()"></button>
+        <button class="btn1" id="65" onclick="mysound.play()"></button>
+        <button class="btn1" id="66" onclick="mysound.play()"></button>
+      </div>
+    </div>
+
+    <script src="next.js"></script>
+    <script>
+      var mysound = new Audio();
+      mysound.src = "sound.mp3";
+      var ending = new Audio();
+      ending.src = "ending.mp3";
+
+      var Minutes = 1;
+      var time = Minutes * 60;
+
+      const timer = document.querySelector(".timer");
+      setInterval(timing, 1000);
+      function timing() {
+        if (time >= 0) {
+          const minutes = Math.floor(time / 60);
+          let seconds = time % 60;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+          timer.innerHTML = `${minutes}:${seconds}`;
+          time--;
+          if (time == 0) {
+            ending.play();
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all ease 0.36s;
+}
+.btn {
+  padding: 60px 60px;
+  background: #25282e;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+.cbtn {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 2px;
+  padding-top: 70px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+  background-color: rgba(37, 40, 46, 0.4);
+  padding-top: 60px;
+}
+body {
+  background-color: #3f4f69;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: greenyellow;
+}
+.changer {
+  animation-name: changer;
+  animation-duration: 0.8s;
+  padding: 60px 60px;
+  background: #25282e;
+  border-radius: 10px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+@keyframes changer {
+  70% {
+    padding: 60px 60px;
+    background: aliceblue;
+    border-radius: 10px;
+    border: 1px solid grey;
+  }
+}
+.btn:active {
+  padding: 60px 60px;
+  background: aliceblue;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+.changer1,
+.changer2,
+.changer3,
+.changer4 {
+  animation-name: changer1;
+  animation-duration: 1.2s;
+  padding: 60px 60px;
+  background: #25282e;
+  border-radius: 10px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+@keyframes changer1 {
+  70% {
+    padding: 60px 60px;
+    background: aliceblue;
+    border-radius: 10px;
+    border: 1px solid grey;
+  }
+}

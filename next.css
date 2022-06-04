@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all ease 0.36s;
+}
+.btn1 {
+  padding: 45px 45px;
+  background: #25282e;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+.cbtn1 {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  gap: 2px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 60px;
+  background-color: rgba(37, 40, 46, 0.4);
+  padding-top: 200px;
+}
+body {
+  background-color: #3f4f69;
+}
+.btn1:hover {
+  cursor: pointer;
+  background-color: greenyellow;
+}
+.changer {
+  animation-name: changer;
+  animation-duration: 1.2s;
+  padding: 45px 45px;
+  background: #25282e;
+  border-radius: 10px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+@keyframes changer {
+  70% {
+    padding: 45px 45px;
+    background: aliceblue;
+    border-radius: 10px;
+    border: 1px solid grey;
+  }
+}
+.btn1:active {
+  padding: 45px 45px;
+  background: aliceblue;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+.changer1,
+.changer2,
+.changer3,
+.changer4 {
+  animation-name: changer1;
+  animation-duration: 1.2s;
+  padding: 60px 60px;
+  background: #25282e;
+  border-radius: 10px;
+  border: 1px solid grey;
+  cursor: pointer;
+}
+@keyframes changer1 {
+  70% {
+    padding: 60px 60px;
+    background: aliceblue;
+    border-radius: 10px;
+    border: 1px solid grey;
+  }
+}
+.timer {
+  font-size: 60px;
+  font-family: "Roboto", sans-serif;
+  text-align: left;
+}
+.time {
+  position: -webkit-sticky;
+  position: sticky;
+  padding: 1px;
+  background-color: #56d356e8;
+  border: 2px solid #4caf50;
+  top: 0;
+}
+.score {
+  text-align: right;
+  top: -80px;
+  position: relative;
+  font-size: 60px;
+  font-family: "Roboto", sans-serif;
+}
+.points {
+  text-align: right;
+  top: -80px;
+  position: relative;
+  font-size: 60px;
+  font-family: "Roboto", sans-serif;
+  left: -55px;
+}
